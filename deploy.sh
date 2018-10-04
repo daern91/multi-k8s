@@ -10,7 +10,7 @@ docker push daern91/multi-client:$GIT_SHA
 docker push daern91/multi-server:$GIT_SHA
 docker push daern91/multi-worker:$GIT_SHA
 
-kubectl apply -f k8s/
-kubectl set image deployments/client-deplyment client=daern91/multi-client:$GIT_SHA
-kubectl set image deployments/server-deplyment server=daern91/multi-server:$GIT_SHA
-kubectl set image deployments/worker-deplyment worker=daern91/multi-worker:$GIT_SHA
+kubectl apply -f k8s
+kubectl set image deployments/client-deployment client=daern91/multi-client:$GIT_SHA
+kubectl set image deployments/server-deployment server=daern91/multi-server:$GIT_SHA
+kubectl set image deployments/worker-deployment worker=daern91/multi-worker:$GIT_SHA
